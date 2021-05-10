@@ -16,6 +16,10 @@ public class ChildrensPrice implements Price {
          if (daysRented > 3) return (daysRented - 3 ) * 1.5;
            else return 1.5;
     }
+
+    /*
+     * this method doesn't make sense in that way
+     */
     public int getFrequentRenterPoints(int daysRented) {
         return 1;
     }
