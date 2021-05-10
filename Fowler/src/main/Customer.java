@@ -33,11 +33,11 @@ public class Customer {
             Rental each = (Rental) enum_rentals.nextElement();
             //determine amounts for each line
             //show figures for this rental
-            stmt += "\t" + each.getMovie().getTitle()+ "\t" + "\t" + each.getDaysRented() + "\t" + String.valueOf(each.getCharge()) + "\n";
+            stmt += "\t" + each.getMovie().getTitle()+ "\t" + "\t" + each.getDaysRented() + "\t" + each.getCharge() + "\n";
         }
         //add footer lines
-        stmt += "Amount owed is " + String.valueOf(getTotalCharge()) + "\n" +
-                "You earned " + String.valueOf(getTotalFrequentRenterPoints()) + " frequent renter points";
+        stmt += "Amount owed is " + getTotalCharge() + "\n" +
+                "You earned " + getTotalFrequentRenterPoints() + " frequent renter points";
         return stmt;
     }
 
