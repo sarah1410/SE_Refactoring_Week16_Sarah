@@ -6,14 +6,18 @@
  * To change this template use File | Settings | File Templates.
  */
 public class NewReleasePrice implements Price {
+
     public int getPriceCode(){
         return Movie.NEW_RELEASE;
     }
 
     public double getCharge(int daysRented){
-        return (daysRented * 3 );
+        return (daysRented * 3);
     }
 
+    /*
+     * this method doesn't make sense in that way
+     */
     public int getFrequentRenterPoints(int daysRented) {
         return 2;
     }
