@@ -26,19 +26,19 @@ public class Customer {
          */
         Enumeration enum_rentals = this.rentals.elements();
 
-        String result = "main.Rental Record for " + this.getName() + "\n" +
+        String stmt = "main.Rental Record for " + this.getName() + "\n" +
                 "\t" + "Title" + "\t" + "\t" + "Days" + "\t" + "Amount" + "\n";
 
         while (enum_rentals.hasMoreElements()) {
             Rental each = (Rental) enum_rentals.nextElement();
             //determine amounts for each line
             //show figures for this rental
-            result += "\t" + each.getMovie().getTitle()+ "\t" + "\t" + each.getDaysRented() + "\t" + String.valueOf(each.getCharge()) + "\n";
+            stmt += "\t" + each.getMovie().getTitle()+ "\t" + "\t" + each.getDaysRented() + "\t" + String.valueOf(each.getCharge()) + "\n";
         }
         //add footer lines
-        result += "Amount owed is " + String.valueOf(getTotalCharge()) + "\n" +
+        stmt += "Amount owed is " + String.valueOf(getTotalCharge()) + "\n" +
                 "You earned " + String.valueOf(getTotalFrequentRenterPoints()) + " frequent renter points";
-        return result;
+        return stmt;
     }
 
 //    It is worth stopping to think a bit about the last refactoring. Most refactorings reduce the amount
